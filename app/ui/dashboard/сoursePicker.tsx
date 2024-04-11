@@ -2,11 +2,10 @@
 
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {
-    ChevronDownIcon,
-    PhoneIcon,
-    PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronUpIcon } from "@heroicons/react/20/solid";
+import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
+import { setSelectedCourse } from "@/lib/store/slices/educationSlice";
+import { setdCourseId } from "@/lib/store/slices/educationSlice";
 import Image from "next/image";
 
 const solutions = [
@@ -15,24 +14,31 @@ const solutions = [
         description: "lorem ipsum dolor sit amet",
         href: "#",
         icon: "/javascriptIcon.svg",
+        id: 1,
     },
     {
         name: "Курс Путешествие в мир C#",
         description: "lorem ipsum dolor sit amet",
         href: "#",
         icon: "/cSharp.svg",
+        id: 2,
     },
 ];
 
 export default function CoursePicker() {
+    const dispatch = useAppDispatch();
+
+    const onClickCourse = (id: number) => {
+        dispatch(setSelectedCourse(true));
+        dispatch(setdCourseId(id));
+    };
+
     return (
         <Popover className="relative">
             <div className="w-full flex justify-center">
-                <Popover.Button className="inline-flex items-center justify-center gap-x-1 text-sm font-semibold leading-6 text-orange-600">
-                    <span className="text-orange-600 text-xl">
-                        Выбрать курс
-                    </span>
-                    <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                <Popover.Button className="inline-flex items-center px-10 py-5 rounded-2xl justify-center gap-x-1 text-sm font-semibold bg-orange-600 leading-6 text-slate-100">
+                    <span className="text-slate-100 text-xl">Выбрать курс</span>
+                    <ChevronUpIcon className="h-5 w-5" aria-hidden="true" />
                 </Popover.Button>
             </div>
 
@@ -45,12 +51,15 @@ export default function CoursePicker() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
             >
-                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                <Popover.Panel className="absolute left-1/2 bottom-full z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
                     <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                         <div className="p-4">
                             {solutions.map((item) => (
                                 <div
                                     key={item.name}
+                                    onClick={() => {
+                                        onClickCourse(item.id);
+                                    }}
                                     className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
                                 >
                                     <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">

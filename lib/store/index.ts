@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import mainCourseSlice from "./slices/mainCourseSlice";
 import verticalMenuSlice from "./slices/verticalMenuSlice";
 import lessonSlice from "./slices/lessonSlice";
+import educationSlice from "./slices/educationSlice";
 
 
 export const makeStore = () => {
@@ -10,6 +11,7 @@ export const makeStore = () => {
             mainCourse: mainCourseSlice,
             verticalMenu: verticalMenuSlice,
             lessonSlice: lessonSlice,
+            education: educationSlice
         },
         devTools: true,
     });

@@ -18,7 +18,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
 }) => {
     return (
         <article
-            className="w-64 mx-3 mt-3 shadow-lg h-[400px] rounded-md duration-300 hover:bg-gray-900 bg-gray-800" // Dynamic height
+            className="w-full md:w-64 lg:w-80 mx-3 mt-3 shadow-lg  rounded-md duration-300 hover:bg-gray-900 bg-gray-800" // Dynamic height
         >
             <Link href="/dashboard/lesson">
                 <div className="flex flex-col justify-between">
