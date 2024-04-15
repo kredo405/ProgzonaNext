@@ -6,6 +6,7 @@ import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
 import { setSelectedCourse } from "@/lib/store/slices/educationSlice";
 import { setdCourseId } from "@/lib/store/slices/educationSlice";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const solutions = [
@@ -27,17 +28,19 @@ const solutions = [
 
 export default function CoursePicker() {
     const dispatch = useAppDispatch();
+    const router = useRouter();
 
     const onClickCourse = (id: number) => {
-        dispatch(setSelectedCourse(true));
-        dispatch(setdCourseId(id));
+        // dispatch(setSelectedCourse(true));
+        // dispatch(setdCourseId(id));
+        router.push("/dashboard/education");
     };
 
     return (
         <Popover className="relative">
             <div className="w-full flex justify-center">
-                <Popover.Button className="inline-flex items-center px-10 py-5 rounded-2xl justify-center gap-x-1 text-sm font-semibold bg-orange-600 leading-6 text-slate-100">
-                    <span className="text-slate-100 text-xl">Выбрать курс</span>
+                <Popover.Button className="inline-flex items-center px-10 py-5 rounded-2xl justify-center gap-x-1 text-sm font-semibold border-2 text-orange-600 border-orange-600 border-solid hover:bg-orange-600 leading-6 hover:text-slate-100">
+                    <span className=" text-xl">Выбрать курс</span>
                     <ChevronUpIcon className="h-5 w-5" aria-hidden="true" />
                 </Popover.Button>
             </div>

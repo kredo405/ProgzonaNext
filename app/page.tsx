@@ -36,13 +36,13 @@ export default function Home() {
                 <div className="flex flex-col lg:flex-row justify-center mt-10 py-10">
                     <Link
                         href="/auth"
-                        className="py-3 mb-5 text-center font-mono lg:mb-0 w-full lg:w-56 px-auto mr-10 bg-orange-600 hover:bg-orange-700 text-slate-100 text-xl rounded-lg border-solid border-2 border-orange-600 hover:border-orange-700"
+                        className="py-3 mb-5 text-center font-mono lg:mb-0 w-full lg:w-56 px-auto mr-10 border-2 border-orange-600 border-solid hover:bg-orange-600 text-orange-500  hover:text-slate-100 text-xl rounded-lg "
                     >
                         Вход
                     </Link>
                     <Link
                         href="/registration"
-                        className="py-3 px-auto text-center font-mono w-full lg:w-56 bg-sky-600 hover:bg-sky-700 text-slate-100 text-xl rounded-lg border-solid border-2 border-sky-600 hover:border-sky-700"
+                        className="py-3 px-auto text-center font-mono w-full lg:w-56 hover:bg-sky-600 hover:text-slate-100 text-xl rounded-lg border-solid border-2 border-sky-600 text-sky-600"
                     >
                         Регистрация
                     </Link>

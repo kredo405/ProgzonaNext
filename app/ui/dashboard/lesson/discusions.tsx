@@ -10,12 +10,12 @@ const Discusions = () => {
                     </h2>
                 </div>
                 <div className="mt-5 flex flex-col md:flex-row justify-around items-center border-t-2 border-gray-600 py-5 border-solid px-2 md:px-20">
-                    <textarea
+                    <input
                         placeholder="Напишите ваше сообщение"
-                        className="bg-[#444851] rounded-lg text-slate-50 px-4 py-3 font-mono w-full"
-                    ></textarea>
+                        className="bg-[#2d3037] rounded-lg text-slate-50 px-4 h-14 font-mono w-full"
+                    />
                     <div className="mx-4 mt-3 md:mt-0">
-                        <button className="px-10 py-3 bg-orange-600 text-slate-200 font-mono rounded-lg">
+                        <button className="px-10 py-3 bg-sky-600 hover:bg-sky-700 text-slate-200 font-mono rounded-lg">
                             Отправить
                         </button>
                     </div>

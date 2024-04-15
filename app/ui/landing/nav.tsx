@@ -20,9 +20,9 @@ export const Nav: React.FC = () => {
             current: pathname === "/",
         },
         {
-            name: "Обучение",
-            href: "/education-landing",
-            current: pathname === "/education-landing",
+            name: "Блог",
+            href: "/blog",
+            current: pathname === "/blog",
         },
         {
             name: "Контакты",

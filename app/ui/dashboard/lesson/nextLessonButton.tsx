@@ -42,12 +42,26 @@ export default function NextLessonButton() {
     };
 
     return (
-        <div>
+        <div className="flex justify-end items-center">
             <button
                 onClick={showPropsConfirm}
-                className="px-20 py-4 bg-orange-500 hover:bg-orange-600 text-slate-100 font-mono font-semibold rounded-xl"
+                className="px-10 py-4 flex  text-orange-600 hover:text-slate-300 border-2 border-orange-600 hover:bg-orange-600 font-mono font-semibold rounded-xl"
             >
                 Следующий урок
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 mx-2"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                </svg>
             </button>
         </div>
     );

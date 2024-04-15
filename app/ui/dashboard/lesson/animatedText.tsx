@@ -37,7 +37,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
     return (
         <div
-            className="text-slate-200 font-mono antialiased leading-6"
+            className="text-slate-200 font-mono antialiased leading-6 md:px-32"
             id="animatedText"
         >
             {visibleText}
@@ -45,7 +45,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
                 {animationComplete && // Показываем кнопки только после завершения анимации текста
                     buttons.map((buttonText, index) => (
                         <button
-                            className="bg-orange-500 w-full text-slate-200 font-mono px-5 py-3 rounded-lg hover:bg-orange-600 m-3"
+                            className="hover:bg-orange-600 w-full md:w-[400px] border-2 border-orange-600 border-solid hover:text-slate-200 font-mono px-5 py-3 rounded-lg text-orange-500 m-3 md:mx-10"
                             key={index}
                             onClick={() => onButtonClick(buttonText)}
                         >

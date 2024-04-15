@@ -294,7 +294,7 @@ const Lesson = () => {
                                                     />
                                                 </div>
 
-                                                <div className="flex justify-center py-10">
+                                                <div className="flex justify-end py-10">
                                                     <NextLessonButton />
                                                 </div>
                                             </div>

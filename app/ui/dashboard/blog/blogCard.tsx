@@ -26,7 +26,7 @@ const posts = [
 export default function BlogCard() {
     return (
         <Link
-            href="/dashboard/article"
+            href="/article"
             className="w-full lg:w-5/12 mx-auto lg:mx-0 bg-[#2a2e3a] hover:bg-[#212633] cursor-pointer rounded-2xl p-4 flex flex-col"
         >
             <div>

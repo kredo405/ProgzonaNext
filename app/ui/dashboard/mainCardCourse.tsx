@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MainCardCourse() {
     return (
@@ -13,9 +14,12 @@ export default function MainCardCourse() {
                     />
                 </div>
                 <div className="mt-5 flex justify-center">
-                    <button className="bg-orange-600 text-slate-200 font-mono rounded-lg w-[300px] py-4">
+                    <Link
+                        href="/dashboard/lesson"
+                        className="bg-orange-600 hover:bg-orange-700 text-slate-200 font-mono rounded-lg w-[300px] py-4 text-center"
+                    >
                         Продолжить учиться
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="lg:ml-10 mt-5 w-full lg:w-8/12">

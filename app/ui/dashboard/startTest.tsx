@@ -217,7 +217,7 @@ export default function StartTest() {
                                     )
                                 );
                             }}
-                            className="px-10 py-3 bg-orange-600 hover:bg-orange-700 text-slate-200 font-mono rounded-lg mt-5"
+                            className="px-10 py-3 hover:bg-orange-600 hover:text-slate-200 text-orange-500 border-solid border-2 border-orange-600 font-mono rounded-lg mt-5"
                         >
                             Перейти к курсам
                         </button>
@@ -244,7 +244,7 @@ export default function StartTest() {
                                 (option, index) => (
                                     <li key={index}>
                                         <button
-                                            className="text-slate-100 font-mono w-full  lg:w-96 px-2 py-2 bg-orange-600 text-center my-3 rounded-xl hover:bg-orange-700"
+                                            className="hover:text-slate-200 font-mono w-full lg:w-96 px-2 py-2 border-2 border-orange-600 text-orange-500 hover:bg-orange-600 text-center my-3 rounded-xl "
                                             onClick={() => handleAnswer(option)}
                                         >
                                             {option}
